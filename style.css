@@ -1,0 +1,36 @@
+.gantt_grid_head_add, .gantt_add{
+  display: none !important;
+}
+.gantt_weekend{
+  background: #f4f7f4;
+  opacity:0.6;
+}
+/*.gantt_odd{
+  background: #e4e7e4;
+  opacity:0.2;
+}
+.gantt_odd.gantt_weekend{
+  background: #d4d7d4 !important; opacity:0.2;
+}*/
+.gantt_today{
+  background: #ffe1de !important;
+}
+/*.gantt_current_week{
+  background: #fff7f4 !important;
+}*/
+.gantt_person_task{
+  visibility:hidden;
+}
+/*.gantt_person{
+  background: #f4f7f4 !important;
+  border:0;
+}*/
+.gantt_person_grid{
+  font-weight:bold;
+}
+.gantt_task .gantt_scale_cell.gantt_weekend {
+  color:black;
+}
+.gantt_task .gantt_scale_cell.gantt_today {
+  color:gray;
+}

@@ -1,0 +1,3 @@
+[submodule "lib/jsew"]
+	path = lib/jsew
+	url = https://github.com/hvqzao/jsew
