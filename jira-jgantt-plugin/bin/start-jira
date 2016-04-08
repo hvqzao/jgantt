@@ -1,0 +1,4 @@
+#!/bin/bash
+
+atlas-run-standalone --product jira --version 6.4.6 --server dev --http-port 8000 --context-path ROOT
+

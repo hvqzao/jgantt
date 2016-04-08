@@ -1,4 +1,4 @@
-package hvqzao.jira-jgantt-plugin.api;
+package hvqzao.jgantt.api;
 
 public interface MyPluginComponent
 {

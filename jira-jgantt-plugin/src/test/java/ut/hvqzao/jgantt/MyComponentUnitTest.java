@@ -1,8 +1,8 @@
-package ut.hvqzao.jira-jgantt-plugin;
+package ut.hvqzao.jgantt;
 
 import org.junit.Test;
-import hvqzao.jira-jgantt-plugin.api.MyPluginComponent;
-import hvqzao.jira-jgantt-plugin.impl.MyPluginComponentImpl;
+import hvqzao.jgantt.api.MyPluginComponent;
+import hvqzao.jgantt.impl.MyPluginComponentImpl;
 
 import static org.junit.Assert.assertEquals;
 

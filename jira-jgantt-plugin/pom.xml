@@ -6,16 +6,16 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>hvqzao</groupId>
-    <artifactId>jira-jgantt-plugin</artifactId>
-    <version>1.1</version>
+    <artifactId>jgantt</artifactId>
+    <version>1.2</version>
 
     <organization>
-        <name>Example Company</name>
-        <url>http://www.example.com/</url>
+        <name>hvqzao</name>
+        <url>https://github.com/hvqzao</url>
     </organization>
 
-    <name>jira-jgantt-plugin</name>
-    <description>This is the hvqzao:jira-jgantt-plugin plugin for Atlassian JIRA.</description>
+    <name>jgantt</name>
+    <description>This is the hvqzao:jgantt plugin for Atlassian JIRA.</description>
     <packaging>atlassian-plugin</packaging>
 
     <dependencies>
@@ -116,7 +116,8 @@
 					-->
                     <enableQuickReload>true</enableQuickReload>
                     <enableFastdev>false</enableFastdev>
-
+					<compressResources>false</compressResources>
+					
                     <!-- See here for an explanation of default instructions: -->
                     <!-- https://developer.atlassian.com/docs/advanced-topics/configuration-of-instructions-in-atlassian-plugins -->
                     <instructions>
@@ -124,7 +125,7 @@
 
                         <!-- Add package to export here -->
                         <Export-Package>
-                            hvqzao.jira-jgantt-plugin.api,
+                            hvqzao.jgantt.api,
                         </Export-Package>
 
                         <!-- Add package import here -->
@@ -174,6 +175,9 @@
         <atlassian.plugin.key>${project.groupId}.${project.artifactId}</atlassian.plugin.key>
 		<!-- TestKit version 6.x for JIRA 6.x -->
 		<testkit.version>6.3.11</testkit.version>
+		<!-- <atlassian.dev.mode>false</atlassian.dev.mode> --> 
+    	<!-- <atlassian.webresource.disable.minification>true</atlassian.webresource.disable.minification> -->
     </properties>
 
+    <url>https://github.com/hvqzao/jgantt</url>
 </project>

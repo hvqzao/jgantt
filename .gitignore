@@ -1,3 +1,6 @@
 /build/
+/custom_builds/
 /helper/
+/jira-jgantt-plugin/amps-standalone/
+/jira-jgantt-plugin/target/
 /tmp/

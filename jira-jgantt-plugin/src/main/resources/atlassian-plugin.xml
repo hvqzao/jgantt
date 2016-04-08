@@ -3,22 +3,29 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
+        <!-- <param name="plugin-icon">images/pluginIcon.png</param> -->
+        <!-- <param name="plugin-logo">images/pluginLogo.png</param> -->
+        <param name="plugin-icon">data/favicon.png</param>
+        <param name="plugin-logo">data/favicon.png</param>
     </plugin-info>
 
     <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="jira-jgantt-plugin"/>
+    <resource type="i18n" name="i18n" location="jgantt"/>
     
     <!-- add our web resources -->
-    <web-resource key="jira-jgantt-plugin-resources" name="jira-jgantt-plugin Web Resources">
+    <web-resource key="jgantt-resources" name="jgantt Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
         
-        <resource type="download" name="jira-jgantt-plugin.css" location="/css/jira-jgantt-plugin.css"/>
-        <resource type="download" name="jira-jgantt-plugin.js" location="/js/jira-jgantt-plugin.js"/>
-        <resource type="download" name="images/" location="/images"/>
+        <resource type="download" name="helper.js" location="/js/helper.js"/>
 
-        <context>jira-jgantt-plugin</context>
+        <context>gh-rapid</context>
+    </web-resource>
+    <web-resource key="jgantt-static" name="jgantt Static">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="data/" location="/data"/>
+
+        <context>jgantt</context>
     </web-resource>
     
 </atlassian-plugin>

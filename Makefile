@@ -1,7 +1,7 @@
 
-RESOURCE_URL = "//dev/jgantt"
-#RESOURCE_URL = "/download/resources/hvqzao.jgantt:jgantt-static/resources"
-FILTER_OUT = ""
+#RESOURCE_URL = "//dev/jgantt"
+RESOURCE_URL = "/download/resources/hvqzao.jgantt:jgantt-static/data"
+FILTER_OUT = "__"
 
 .PHONY:	all clean
 
@@ -46,7 +46,7 @@ helper:
 	mkdir -p $@
 
 helper/helper.js:	helper.js
-	./bin/jsew.py -p closure-compiler -o $@ $<
+	./bin/jsew.py -p closure-compiler -p './bin/forward.py -r RESOURCE_URL ${RESOURCE_URL} VERSION version' -o $@ $<
 
 clean:
 	for i in loading.css index.html dhtmlxgantt.js dhtmlxgantt.css zepto.min.js style.css stage.js logic.js favicon.png ; do rm build/$$i >/dev/null 2>&1 || true ; done

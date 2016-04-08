@@ -26,6 +26,10 @@
 			return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].indexOf(name) + 1;
 		}
 
+		var array_equal = function(a1,a2) {
+			return (a1.length == a2.length && a1.every(function(v,i) { return v === a2[i]; }));
+		}
+
 		Date.prototype.getWeek = function() {
 			var determinedate = new Date();
 			determinedate.setFullYear(this.getFullYear(), this.getMonth(), this.getDate());
@@ -89,14 +93,15 @@
 		var owners_added = [];
 		//var odd = true;
 		$('div.ghx-issue').each(function(){
-
+			var extra = $(this).find('.ghx-extra-field-row');
+			if (extra.length < 2) {
+				return;
+			}
 			var color;
 			var epic_element = $(this).find('.ghx-highlighted-field span');
 			if (epic_element.length > 0) {
 				color = $(epic_element[0]).css("background-color");
 			}
-
-			var extra = $(this).find('.ghx-extra-field-row');
 			var title = $(this).find('.ghx-summary').attr('title');
 			var add = false;
 			var owner = $(extra[0]).text().replace(/FILTER_OUT/,'');
@@ -104,19 +109,17 @@
 			var end_date;
 			var duration;
 			var progress;
-			var start_text = $(extra[1]).text();
-			if (start_text != "None") {
-				start_text = start_text.split('/');
+			var start_text = $(extra[1]).text().split('/');
+			if (! array_equal(start_text, ['None']) && start_text.length == 3 && ! isNaN(start_text[0]) && month(start_text[1]) > 0 && ! isNaN(start_text[2])) {
 				start_date = new Date('20'+start_text[2], month(start_text[1])-1, start_text[0]);
 				start_text = pad(start_text[0],2)+'-'+pad(month(start_text[1]),2)+'-20'+start_text[2];
-
-				var end = $(extra[2]).text().split('/');
-				if (end == "None") {
-					end_date = new Date(start_date);
-					end_date.setDate(start_date.getDate() + 10);
-				} else {
-					end_date =  new Date('20'+end[2], month(end[1])-1, end[0]);
-				}
+				end_date = new Date(start_date);
+                //if (extra.length > 2) {
+					var end_text = $(extra[2]).text().split('/');
+					if (! array_equal(end_text, ['None']) && end_text.length == 3 && ! isNaN(end_text[0]) && month(end_text[1]) > 0 && ! isNaN(end_text[2])) {
+						end_date =  new Date('20'+end_text[2], month(end_text[1])-1, end_text[0]);
+					}
+                //}
 				duration = Math.round((end_date - start_date)/(1000*60*60*24));
 				if (duration <= 0) {
 					duration = 10;

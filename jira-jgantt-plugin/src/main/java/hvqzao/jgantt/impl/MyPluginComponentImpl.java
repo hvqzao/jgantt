@@ -1,9 +1,9 @@
-package hvqzao.jira-jgantt-plugin.impl;
+package hvqzao.jgantt.impl;
 
 import com.atlassian.plugin.spring.scanner.annotation.export.ExportAsService;
 import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;
 import com.atlassian.sal.api.ApplicationProperties;
-import hvqzao.jira-jgantt-plugin.api.MyPluginComponent;
+import hvqzao.jgantt.api.MyPluginComponent;
 
 import javax.inject.Inject;
 import javax.inject.Named;
