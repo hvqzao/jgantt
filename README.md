@@ -2,7 +2,10 @@
 
 Simple Gantt visualisation for JIRA Agile Kanban board issues.
 
+![jgantt-button](https://cloud.githubusercontent.com/assets/4956006/14389634/ddc815c4-fdb3-11e5-91a5-9f44fe7b1c50.png)
+
 ![jgantt](https://cloud.githubusercontent.com/assets/4956006/14389671/0c4429d8-fdb4-11e5-8eca-891fefc8e806.png)
+
 jGantt plugin for Atlassian JIRA Kanban board:
 
 https://www.youtube.com/watch?v=NcwqJy1xWHc
