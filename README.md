@@ -8,6 +8,10 @@ Example output:
 
 ![jgantt](https://cloud.githubusercontent.com/assets/4956006/14389671/0c4429d8-fdb4-11e5-8eca-891fefc8e806.png)
 
+Card layout (Grouping field, Start date, End date):
+
+![jgantt-example-issue](https://cloud.githubusercontent.com/assets/4956006/14398082/b5b67750-fde1-11e5-8091-7439ebddb23b.png)
+
 jGantt plugin for Atlassian JIRA Kanban board:
 
 https://www.youtube.com/watch?v=NcwqJy1xWHc
