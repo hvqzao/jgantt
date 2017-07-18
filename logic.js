@@ -79,6 +79,7 @@
 		//		//{id:2, source:1, target:3, type:"0"},
 		//    ]
 		//};
+		
 		var data = [];
 
 		var owners = [];
